@@ -1,0 +1,19 @@
+# API
+fastapi
+uvicorn[standard]
+pydantic[email]
+
+# Database
+sqlalchemy
+alembic
+
+# Utils
+passlib[bcrypt]
+# pyjwt
+
+
+
+# Testing
+# pytest
+# pytest-asyncio
+# httpx
