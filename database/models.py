@@ -14,25 +14,12 @@ class User(Base):
     unique_code = Column(String, default=str(uuid.uuid4()), unique=True)
     name = Column(String, nullable=False)
     email = Column(String, nullable=False)
-    # password_hash = Column(String, nullable=False)
+    password_hash = Column(String, nullable=False)
     created_at = Column(DateTime, default=func.now())
     updated_at = Column(DateTime, default=func.now(), onupdate=func.now())
 
     # rides = relationship("Ride", back_populates="creator")
 
-
-    # pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-
-    # def hash_password(self, password):
-    #     """Create password hash
-    #     """
-    #     self.password_hash = pwd_context.hash(password)
-
-
-    # def verify_password(self, password):
-    #     """Verify password against the password_hash
-    #     """
-    #     return pwd_context.verify(password, self.password_hash)
 
 
 # class Ride(Base):
