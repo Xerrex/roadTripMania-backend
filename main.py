@@ -1,5 +1,11 @@
 from fastapi import FastAPI
 
+from database.db_setup import engine
+from database import models
+
+
+models.Base.metadata.create_all(bind=engine)
+
 title = "Road Trip Mania Backend"
 description = "Backend for the road trip mania app"
 version = "1.0"

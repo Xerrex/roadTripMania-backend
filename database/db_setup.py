@@ -10,13 +10,3 @@ engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args=CF.DATABASE_CONNECT
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
-
-
-def get_db():
-    """Get DB dependency
-    """
-    db = SessionLocal()
-    try:
-        yield db
-    finally: 
-        db.close()

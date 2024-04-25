@@ -1,0 +1,5 @@
+ENVIRONMENT=<PRODUCTION-or-STAGING-or-DEVELOPMENT>
+
+PRODUCTION_DATABASE_URL=<your-PRODUCTION-environment-database-url>
+STAGING_DATABASE_URL=<your-STAGING-environment-database-url>
+DEVELOPMENT_DATABASE_URL=sqlite:///./development.db

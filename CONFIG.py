@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 ENVIRONMENT = os.getenv("ENVIRONMENT")
 
 DATABASE_URL = os.getenv(f"{ENVIRONMENT}_DATABASE_URL")
